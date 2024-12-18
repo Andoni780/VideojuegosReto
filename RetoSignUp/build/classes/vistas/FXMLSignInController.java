@@ -222,7 +222,7 @@ public class FXMLSignInController implements Initializable {
            
 
             if (usuarioCorrecto(email,password)) {
-                mainApp.mostrarSignOut(email);  
+                mainApp.mostrarTiendas();  
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error de Inicio de Sesión");
@@ -268,22 +268,6 @@ public class FXMLSignInController implements Initializable {
         }
     }
 
-    /**
-     * Muestra una ventana de confirmación para proceder al registro de un nuevo usuario.
-     * Si el usuario confirma, se muestra la ventana de registro.
-     * 
-     * @param event Evento que desencadena la ventana de registro.
-     */
-    @FXML
-    private void ventanaRegistrarse(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            mainApp.mostrarSignUp();
-        } catch (Exception ex) {
-            Logger.getLogger(FXMLSignInController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
     @FXML
     private void ventanaRecuperacion(ActionEvent event) {
         Stage stage = new Stage();

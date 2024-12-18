@@ -65,7 +65,6 @@
                         </ImageView>
                     </children>
                 </StackPane>
-                <Button fx:id="btnRegistrarse" mnemonicParsing="false" onAction="#ventanaRegistrarse" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" text="¿No tienes cuenta?" />
             <Button fx:id="btnRecuperacion" layoutX="287.0" layoutY="315.0" mnemonicParsing="false" onAction="#ventanaRecuperacion" prefHeight="27.0" prefWidth="358.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" text="¿No te acuerdas de la contraseña?" />
             </children>
         </VBox>

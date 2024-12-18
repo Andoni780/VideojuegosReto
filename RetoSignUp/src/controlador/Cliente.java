@@ -19,7 +19,6 @@ import libreria.Signable;
 import libreria.Stream;
 import libreria.User;
 import vistas.FXMLSignInController;
-import vistas.FXMLSignUpController;
 
 /**
  * La clase {Cliente} implementa la interfaz {Signable} y se encarga de manejar

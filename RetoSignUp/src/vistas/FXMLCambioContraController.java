@@ -94,7 +94,7 @@ public class FXMLCambioContraController {
                 try {
                     mainApp.mostrarLogin();
                 } catch (Exception ex) {
-                    Logger.getLogger(FXMLSignUpController.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FXMLCambioContraController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
     }
@@ -123,7 +123,7 @@ public class FXMLCambioContraController {
                 try {
                     mainApp.mostrarLogin();
                 } catch (Exception ex) {
-                    Logger.getLogger(FXMLSignUpController.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FXMLCambioContraController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         } else {

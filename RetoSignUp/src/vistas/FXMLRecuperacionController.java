@@ -131,7 +131,7 @@ public class FXMLRecuperacionController {
                 try {
                     mainApp.mostrarLogin();
                 } catch (Exception ex) {
-                    Logger.getLogger(FXMLSignUpController.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FXMLRecuperacionController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         } else {

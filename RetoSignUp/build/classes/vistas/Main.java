@@ -108,46 +108,25 @@ public class Main extends Application {
     }
 
     /**
-     * Muestra la ventana de registro de usuario (Sign Up).
+     * Muestra la ventana de tiendas (Tiendas) después de un inicio de sesión exitoso.
      * 
-     * @throws Exception Si ocurre un error al cargar la vista de registro.
-     */
-    public void mostrarSignUp() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUp.fxml"));
-        Parent root = loader.load();
-        FXMLSignUpController controller = loader.getController();
-        controller.setMainApp(this);
-        aplicarFondo(root);
-
-        Scene scene = new Scene(root);
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logoEquipo.PNG")));
-        primaryStage.setTitle("Sign Up");
-        primaryStage.setOnCloseRequest(this::cerrarVentana);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
-    /**
-     * Muestra la ventana de bienvenida (Sign Out) después de un inicio de sesión exitoso.
-     * 
-     * @param username Nombre del usuario que ha iniciado sesión.
      * @throws Exception Si ocurre un error al cargar la vista de bienvenida.
      */
-    public void mostrarSignOut(String username) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLBienvenido.fxml"));
+    public void mostrarTiendas() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTiendas.fxml"));
         Parent root = loader.load();
-        FXMLSignOutController controller = loader.getController();
-        controller.setMainApp(this);
-        controller.setUserName(username);
-        aplicarFondo(root);
+        FXMLTiendasController controller = loader.getController();
+        controller.setMainApp(this); // Asegúrate de que el controlador de Tiendas tiene un método para recibir el objeto Main
+        aplicarFondo(root); // Método que aplica el fondo
 
         Scene scene = new Scene(root);
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logoEquipo.PNG")));
-        primaryStage.setTitle("Sign Out");
+        primaryStage.setTitle("Tiendas");
         primaryStage.setOnCloseRequest(this::cerrarVentana);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
     
     /**
      * Muestra la ventana de recuperacion (Recuperacion) después de un inicio de sesión exitoso.
@@ -184,6 +163,21 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logoEquipo.PNG")));
         primaryStage.setTitle("Cambio contraseña");
+        primaryStage.setOnCloseRequest(this::cerrarVentana);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    
+    public void mostrarCompra() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCompra.fxml"));
+        Parent root = loader.load();
+        FXMLCompraController controller = loader.getController();
+        controller.setMainApp(this);
+        aplicarFondo(root);
+
+        Scene scene = new Scene(root);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logoEquipo.PNG")));
+        primaryStage.setTitle("Compra");
         primaryStage.setOnCloseRequest(this::cerrarVentana);
         primaryStage.setScene(scene);
         primaryStage.show();
